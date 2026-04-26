@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmin Abaya | Luxury CRM & Admin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        gold: '#D4AF37',
+                        'gold-dark': '#AA8B2C',
+                        soft: '#F9F9F9',
+                        text: '#444444',
+                        border: '#E5E5E5'
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for luxury feel */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #F9F9F9; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #AA8B2C; }
+    </style>
+</head>
+<body class="font-body bg-soft text-text flex h-screen overflow-hidden">
+
+    <aside class="w-64 bg-primary text-white flex flex-col hidden md:flex flex-shrink-0 transition-all duration-300">
+        <div class="h-20 flex items-center justify-center border-b border-gray-800">
+            <a href="#" class="font-heading text-2xl font-medium tracking-widest uppercase flex items-center gap-2">
+                Yasmin <span class="text-gold italic font-normal">Abaya</span>
+            </a>
+        </div>
+        
+        <nav class="flex-1 overflow-y-auto py-6">
+            <ul class="space-y-2 px-4">
+                <li>
+                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 bg-gold/10 text-gold rounded-none border-l-2 border-gold transition-colors">
+                        <i class="fa-solid fa-border-all w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-cart-shopping w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customers.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-users w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Customers</span>
+                    </a>
+                </li>
+                <li class="pt-4 pb-2">
+                    <span class="px-4 text-xs font-heading italic text-gray-500">Inventory & Catalog</span>
+                </li>
+                <li>
+                    <a href="products.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-vest w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="warehouses.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-warehouse w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Warehouses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="categories.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-tags w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Brands & Categories</span>
+                    </a>
+                </li>
+                <li class="pt-4 pb-2">
+                    <span class="px-4 text-xs font-heading italic text-gray-500">System</span>
+                </li>
+                <li>
+                    <a href="reports.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-chart-line w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="roles.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-users-gear w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Roles & Perms</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-gear w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="p-4 border-t border-gray-800">
+            <div class="flex items-center gap-3 px-4 py-2">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=D4AF37&color=111" alt="Admin" class="w-10 h-10 rounded-full">
+                <div>
+                    <p class="text-sm text-white font-medium">Head Atelier</p>
+                    <p class="text-xs text-gray-500">admin@yasminabaya.com</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col h-screen overflow-hidden bg-soft">
+        <header class="h-20 bg-white border-b border-border flex items-center justify-between px-8 flex-shrink-0">
+            <div class="flex items-center gap-4">
+                <button class="md:hidden text-primary hover:text-gold text-xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="relative hidden sm:block">
+                    <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Search orders, clients, or products..." class="pl-10 pr-4 py-2 border border-border rounded-none focus:outline-none focus:border-gold w-80 text-sm font-body">
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <div class="relative">
+                    <button onclick="document.getElementById('notif-dropdown').classList.toggle('hidden')" class="text-gray-400 hover:text-gold relative transition-colors focus:outline-none">
+                        <i class="fa-regular fa-bell text-xl"></i>
+                        <span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full">3</span>
+                    </button>
+                    <!-- Notification Dropdown -->
+                    <div id="notif-dropdown" class="hidden absolute right-0 mt-6 w-80 bg-white border border-border shadow-xl z-50">
+                        <div class="px-4 py-3 border-b border-border flex justify-between items-center bg-soft">
+                            <span class="font-heading text-sm text-primary font-medium">Notifications</span>
+                            <span class="text-xs text-gold cursor-pointer hover:underline">Mark all read</span>
+                        </div>
+                        <div class="max-h-64 overflow-y-auto">
+                            <a href="#" class="block px-4 py-3 border-b border-border hover:bg-soft transition-colors">
+                                <p class="text-xs text-primary font-medium mb-1">New VIP Order</p>
+                                <p class="text-xs text-gray-500 mb-1">Sheikha Noura placed order #ORD-0927.</p>
+                                <p class="text-[10px] text-gold">10 minutes ago</p>
+                            </a>
+                            <a href="#" class="block px-4 py-3 border-b border-border hover:bg-soft transition-colors">
+                                <p class="text-xs text-primary font-medium mb-1">Low Stock Alert</p>
+                                <p class="text-xs text-gray-500 mb-1">Italian Silk rolls critically low at Hawalli Main.</p>
+                                <p class="text-[10px] text-gold">2 hours ago</p>
+                            </a>
+                            <a href="#" class="block px-4 py-3 hover:bg-soft transition-colors">
+                                <p class="text-xs text-primary font-medium mb-1">Quality Control</p>
+                                <p class="text-xs text-gray-500 mb-1">Batch #45 passed final tailoring QC.</p>
+                                <p class="text-[10px] text-gold">Yesterday</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="text-gray-400 hover:text-gold transition-colors">
+                    <i class="fa-solid fa-arrow-right-from-bracket text-xl"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-8">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h1 class="font-heading text-3xl text-primary mb-1">Atelier Overview</h1>
+                    <p class="text-sm text-gray-500 tracking-wide">Welcome back. Here is your boutique's performance.</p>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="bg-white p-6 border border-border">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Total Revenue</p>
+                            <h3 class="font-heading text-2xl text-primary">24,500 KWD</h3>
+                        </div>
+                        <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-green-600 flex items-center gap-1"><i class="fa-solid fa-arrow-up"></i> 12% vs last month</p>
+                </div>
+                
+                <div class="bg-white p-6 border border-border">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Active Orders</p>
+                            <h3 class="font-heading text-2xl text-primary">142</h3>
+                        </div>
+                        <div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 flex items-center gap-1">45 pending fulfillment</p>
+                </div>
+
+                <div class="bg-white p-6 border border-border">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Fabric Rolls (Stock)</p>
+                            <h3 class="font-heading text-2xl text-primary">38 Rolls</h3>
+                        </div>
+                        <div class="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-scroll"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 flex items-center gap-1">Est. Yield: 1,900 Abayas</p>
+                </div>
+
+                <div class="bg-white p-6 border border-border">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">VIP Clients</p>
+                            <h3 class="font-heading text-2xl text-primary">85</h3>
+                        </div>
+                        <div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-green-600 flex items-center gap-1"><i class="fa-solid fa-arrow-up"></i> 3 new this week</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-border mb-10">
+                <div class="px-6 py-5 border-b border-border flex justify-between items-center">
+                    <h2 class="font-heading text-xl text-primary">Production & Warehouse Inventory</h2>
+                    <a href="#" class="text-xs text-gold uppercase tracking-widest hover:text-primary transition-colors">View All</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-soft text-gray-500 text-xs uppercase tracking-widest border-b border-border">
+                            <tr>
+                                <th class="px-6 py-4 font-normal">Product / Design</th>
+                                <th class="px-6 py-4 font-normal">Raw Material (Rolls)</th>
+                                <th class="px-6 py-4 font-normal">Est. Yield / Stock</th>
+                                <th class="px-6 py-4 font-normal">Warehouse Location</th>
+                                <th class="px-6 py-4 font-normal">Rating</th>
+                                <th class="px-6 py-4 font-normal">Sale/Discount</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-border">
+                            <tr class="hover:bg-soft/50 transition-colors">
+                                <td class="px-6 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-200 border border-border"></div>
+                                    <div>
+                                        <p class="font-medium text-primary">Midnight Noir Silk</p>
+                                        <p class="text-xs text-gray-500">Haute Couture</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-primary">
+                                    <span class="inline-block px-2 py-1 bg-primary text-white text-xs mr-2">2 Rolls</span>
+                                    <span class="text-xs text-gray-500">Italian Silk</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="font-medium text-primary">100 Units</span>
+                                    <p class="text-xs text-green-600">In Stock</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold text-xs"></i> Shuwaikh Industrial</span>
+                                </td>
+                                <td class="px-6 py-4 text-gold text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                    <span class="text-gray-500 ml-1">(4.8)</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="text-gray-400">-</span>
+                                </td>
+                            </tr>
+                            
+                            <tr class="hover:bg-soft/50 transition-colors">
+                                <td class="px-6 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-200 border border-border"></div>
+                                    <div>
+                                        <p class="font-medium text-primary">Gilded Embroidery</p>
+                                        <p class="text-xs text-gray-500">Evening Glamour</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-primary">
+                                    <span class="inline-block px-2 py-1 bg-primary text-white text-xs mr-2">1 Roll</span>
+                                    <span class="text-xs text-gray-500">Crepe Silk</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="font-medium text-primary">50 Units</span>
+                                    <p class="text-xs text-gray-500">Processing</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold text-xs"></i> Hawally Central</span>
+                                </td>
+                                <td class="px-6 py-4 text-gold text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    <span class="text-gray-500 ml-1">(4.0)</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-block px-2 py-1 bg-red-50 text-red-600 border border-red-100 text-xs">15% OFF</span>
+                                </td>
+                            </tr>
+
+                            <tr class="hover:bg-soft/50 transition-colors">
+                                <td class="px-6 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-200 border border-border"></div>
+                                    <div>
+                                        <p class="font-medium text-primary">Cashmere Blend Hijab</p>
+                                        <p class="text-xs text-gray-500">Essentials</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-primary">
+                                    <span class="inline-block px-2 py-1 bg-primary text-white text-xs mr-2">0.5 Roll</span>
+                                    <span class="text-xs text-gray-500">Cashmere</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="font-medium text-red-600">8 Units</span>
+                                    <p class="text-xs text-red-600">Low Stock</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold text-xs"></i> Ahmadi Reserve</span>
+                                </td>
+                                <td class="px-6 py-4 text-gold text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="text-gray-500 ml-1">(5.0)</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="text-gray-400">-</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <footer class="text-center text-xs text-gray-400 py-4 font-heading italic">
+                &copy; 2026 Yasmin Abaya House. Crafted for luxury administration.
+            </footer>
+        </div>
+    </main>
+
+</body>
+</html>

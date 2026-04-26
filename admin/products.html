@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmin Abaya | Luxury CRM & Admin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        gold: '#D4AF37',
+                        'gold-dark': '#AA8B2C',
+                        soft: '#F9F9F9',
+                        text: '#444444',
+                        border: '#E5E5E5'
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for luxury feel */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #F9F9F9; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #AA8B2C; }
+    </style>
+</head>
+<body class="font-body bg-soft text-text flex h-screen overflow-hidden">
+
+    <aside class="w-64 bg-primary text-white flex flex-col hidden md:flex flex-shrink-0 transition-all duration-300">
+        <div class="h-20 flex items-center justify-center border-b border-gray-800">
+            <a href="#" class="font-heading text-2xl font-medium tracking-widest uppercase flex items-center gap-2">
+                Yasmin <span class="text-gold italic font-normal">Abaya</span>
+            </a>
+        </div>
+        
+        <nav class="flex-1 overflow-y-auto py-6">
+            <ul class="space-y-2 px-4">
+                <li>
+                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-border-all w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-cart-shopping w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customers.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-users w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Customers</span>
+                    </a>
+                </li>
+                <li class="pt-4 pb-2">
+                    <span class="px-4 text-xs font-heading italic text-gray-500">Inventory & Catalog</span>
+                </li>
+                <li>
+                    <a href="products.html" class="flex items-center gap-3 px-4 py-3 bg-gold/10 text-gold rounded-none border-l-2 border-gold transition-colors">
+                        <i class="fa-solid fa-vest w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="warehouses.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-warehouse w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Warehouses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="categories.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-tags w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Brands & Categories</span>
+                    </a>
+                </li>
+                <li class="pt-4 pb-2">
+                    <span class="px-4 text-xs font-heading italic text-gray-500">System</span>
+                </li>
+                <li>
+                    <a href="reports.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-chart-line w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-gold hover:bg-white/5 transition-colors">
+                        <i class="fa-solid fa-gear w-5"></i>
+                        <span class="text-sm uppercase tracking-wider">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="p-4 border-t border-gray-800">
+            <div class="flex items-center gap-3 px-4 py-2">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=D4AF37&color=111" alt="Admin" class="w-10 h-10 rounded-full">
+                <div>
+                    <p class="text-sm text-white font-medium">Head Atelier</p>
+                    <p class="text-xs text-gray-500">admin@yasminabaya.com</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col h-screen overflow-hidden bg-soft">
+        <header class="h-20 bg-white border-b border-border flex items-center justify-between px-8 flex-shrink-0">
+            <div class="flex items-center gap-4">
+                <button class="md:hidden text-primary hover:text-gold text-xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="relative hidden sm:block">
+                    <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Search orders, clients, or products..." class="pl-10 pr-4 py-2 border border-border rounded-none focus:outline-none focus:border-gold w-80 text-sm font-body">
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <button class="text-gray-400 hover:text-gold relative transition-colors">
+                    <i class="fa-regular fa-bell text-xl"></i>
+                    <span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full">3</span>
+                </button>
+                <button class="text-gray-400 hover:text-gold transition-colors">
+                    <i class="fa-solid fa-arrow-right-from-bracket text-xl"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-8">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h1 class="font-heading text-3xl text-primary mb-1">Products & Inventory</h1>
+                    <p class="text-sm text-gray-500 tracking-wide">Manage your luxury abaya catalog, view rolls, stock, and ratings.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white border border-border mb-10">
+                <div class="px-6 py-5 border-b border-border flex justify-between items-center">
+                    <h2 class="font-heading text-xl text-primary">Catalog Details</h2>
+                    <button onclick="openProductModal()" class="bg-primary text-white hover:bg-gold px-4 py-2 text-xs uppercase tracking-widest transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-plus"></i> Add Product
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-soft text-gray-500 text-xs uppercase tracking-widest border-b border-border">
+                            <tr>
+                                <th class="px-6 py-4 font-normal">Design</th>
+                                <th class="px-6 py-4 font-normal">Rolls (Stock)</th>
+                                <th class="px-6 py-4 font-normal">Warehouse</th>
+                                <th class="px-6 py-4 font-normal">Rating</th>
+                                <th class="px-6 py-4 font-normal">Discount</th>
+                                <th class="px-6 py-4 font-normal text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-border">
+                            <tr class="hover:bg-soft/50 transition-colors">
+                                <td class="px-6 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-200 border border-border flex items-center justify-center"><i class="fa-solid fa-image text-gray-400"></i></div>
+                                    <div>
+                                        <p class="font-medium text-primary">Royal Velvet Abaya</p>
+                                        <p class="text-xs text-gray-500">Luxury Collection</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-block px-2 py-1 bg-primary text-white text-xs mr-2">1 Roll</span>
+                                    <span class="font-medium text-primary block mt-1">50 Units</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold text-xs"></i> Al Ahmadi Hub</span>
+                                </td>
+                                <td class="px-6 py-4 text-gold text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="text-gray-500 ml-1">(4.9)</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-block px-2 py-1 bg-red-50 text-red-600 border border-red-100 text-xs">20% SALE</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button onclick="openProductModal()" class="text-gray-400 hover:text-gold"><i class="fa-solid fa-pen-to-square"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-soft/50 transition-colors">
+                                <td class="px-6 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-200 border border-border flex items-center justify-center"><i class="fa-solid fa-image text-gray-400"></i></div>
+                                    <div>
+                                        <p class="font-medium text-primary">Desert Rose Silk</p>
+                                        <p class="text-xs text-gray-500">Summer Wear</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-block px-2 py-1 bg-primary text-white text-xs mr-2">3 Rolls</span>
+                                    <span class="font-medium text-primary block mt-1">150 Units</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold text-xs"></i> Hawalli Main</span>
+                                </td>
+                                <td class="px-6 py-4 text-gold text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                    <span class="text-gray-500 ml-1">(4.5)</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="text-gray-400">-</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button onclick="openProductModal()" class="text-gray-400 hover:text-gold"><i class="fa-solid fa-pen-to-square"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-soft/50 transition-colors">
+                                <td class="px-6 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-200 border border-border flex items-center justify-center"><i class="fa-solid fa-image text-gray-400"></i></div>
+                                    <div>
+                                        <p class="font-medium text-primary">Golden Thread Kaftan</p>
+                                        <p class="text-xs text-gray-500">Bridal</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-block px-2 py-1 bg-primary text-white text-xs mr-2">0.5 Rolls</span>
+                                    <span class="font-medium text-red-600 block mt-1">25 Units</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold text-xs"></i> Farwaniya Center</span>
+                                </td>
+                                <td class="px-6 py-4 text-gold text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    <span class="text-gray-500 ml-1">(4.0)</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-block px-2 py-1 bg-red-50 text-red-600 border border-red-100 text-xs">10% SALE</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button onclick="openProductModal()" class="text-gray-400 hover:text-gold"><i class="fa-solid fa-pen-to-square"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-soft/50 transition-colors">
+                                <td class="px-6 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-200 border border-border flex items-center justify-center"><i class="fa-solid fa-image text-gray-400"></i></div>
+                                    <div>
+                                        <p class="font-medium text-primary">Onyx Embellished</p>
+                                        <p class="text-xs text-gray-500">Evening Wear</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-block px-2 py-1 bg-primary text-white text-xs mr-2">2 Rolls</span>
+                                    <span class="font-medium text-primary block mt-1">100 Units</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold text-xs"></i> Jahra Warehouse</span>
+                                </td>
+                                <td class="px-6 py-4 text-gold text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="text-gray-500 ml-1">(4.8)</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="text-gray-400">-</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button onclick="openProductModal()" class="text-gray-400 hover:text-gold"><i class="fa-solid fa-pen-to-square"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <footer class="text-center text-xs text-gray-400 py-4 font-heading italic">
+                &copy; 2026 Yasmin Abaya House. Crafted for luxury administration.
+            </footer>
+        </div>
+    </main>
+
+    <!-- Product Modal Overlay -->
+    <div id="product-modal" class="fixed inset-0 bg-primary/80 hidden z-50 flex items-center justify-center backdrop-blur-sm transition-opacity">
+        <div class="bg-white border border-border w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="px-6 py-5 border-b border-border flex justify-between items-center bg-soft">
+                <h3 class="font-heading text-xl text-primary" id="modal-title">Product Details</h3>
+                <button onclick="closeProductModal()" class="text-gray-400 hover:text-gold transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="p-8 space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-primary mb-2">Design Name</label>
+                    <input type="text" placeholder="e.g. Royal Velvet Abaya" class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body">
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-primary mb-2">Category</label>
+                        <select class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body bg-white">
+                            <option>Luxury Collection</option>
+                            <option>Summer Wear</option>
+                            <option>Bridal</option>
+                            <option>Evening Wear</option>
+                            <option>Essentials</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-primary mb-2">Warehouse Location</label>
+                        <select class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body bg-white">
+                            <option>Al Ahmadi Hub</option>
+                            <option>Hawalli Main</option>
+                            <option>Farwaniya Center</option>
+                            <option>Jahra Warehouse</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-primary mb-2">Raw Material (Rolls)</label>
+                        <input type="number" placeholder="0" class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-primary mb-2">Estimated Yield / Stock</label>
+                        <input type="number" placeholder="0" class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-primary mb-2">Rating</label>
+                        <select class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body bg-white">
+                            <option>5.0 Stars (Perfect)</option>
+                            <option>4.5 Stars (Excellent)</option>
+                            <option>4.0 Stars (Great)</option>
+                            <option>3.5 Stars (Good)</option>
+                            <option>3.0 Stars (Average)</option>
+                            <option>Unrated</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-primary mb-2">Discount / Sale Tag</label>
+                        <input type="text" placeholder="e.g. 20% SALE" class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body">
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-border flex justify-end gap-4">
+                    <button onclick="closeProductModal()" class="px-6 py-2 text-sm text-gray-500 hover:text-primary uppercase tracking-widest transition-colors border border-transparent hover:border-border">Cancel</button>
+                    <button onclick="closeProductModal()" class="bg-primary text-white hover:bg-gold px-6 py-2 text-sm uppercase tracking-widest transition-colors">Save Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openProductModal() {
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+        function closeProductModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmin Abaya | Luxury CRM Login</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111111',
+                        gold: '#D4AF37',
+                        'gold-dark': '#AA8B2C',
+                        soft: '#F9F9F9',
+                        text: '#444444',
+                        border: '#E5E5E5'
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-primary min-h-screen flex items-center justify-center relative overflow-hidden">
+    
+    <!-- Subtle Background Elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-10 pointer-events-none">
+        <div class="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] rounded-full border border-gold opacity-20"></div>
+        <div class="absolute top-[60%] left-[60%] w-[80%] h-[80%] rounded-full border border-gold opacity-20"></div>
+    </div>
+
+    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 bg-white z-10 shadow-2xl relative mx-4 md:mx-0">
+        
+        <!-- Left Side: Brand Imagery -->
+        <div class="hidden md:flex flex-col items-center justify-center bg-primary p-12 border-r border-gold/20 relative overflow-hidden">
+            <div class="z-10 text-center">
+                <h1 class="font-heading text-4xl text-white tracking-widest uppercase mb-2">Yasmin <span class="text-gold italic font-normal">Abaya</span></h1>
+                <p class="text-gold/70 text-xs tracking-[0.2em] uppercase mb-8">Haute Couture & Bespoke</p>
+                <div class="w-16 h-[1px] bg-gold mx-auto mb-8"></div>
+                <p class="text-gray-400 text-sm font-light leading-relaxed">Access the atelier management system to oversee production, warehouse operations, and client relations.</p>
+            </div>
+            <!-- Decorative overlay -->
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+
+        <!-- Right Side: Login Form & Roles -->
+        <div class="p-10 md:p-14 flex flex-col justify-center bg-soft relative">
+            <div class="md:hidden text-center mb-10">
+                <h1 class="font-heading text-3xl text-primary tracking-widest uppercase">Yasmin <span class="text-gold italic font-normal">Abaya</span></h1>
+            </div>
+
+            <h2 class="font-heading text-2xl text-primary mb-2">Sign In</h2>
+            <p class="text-sm text-gray-500 mb-8">Please enter your credentials to continue.</p>
+
+            <form action="index.html" class="space-y-5 mb-8">
+                <div>
+                    <label class="block text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Email Address</label>
+                    <input type="email" value="admin@yasminabaya.com" class="w-full px-4 py-3 border border-border focus:outline-none focus:border-gold text-sm font-body bg-white transition-colors" required>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="block text-xs font-medium text-gray-500 uppercase tracking-wider">Password</label>
+                        <a href="#" class="text-xs text-gold hover:text-gold-dark transition-colors">Forgot Password?</a>
+                    </div>
+                    <input type="password" value="password123" class="w-full px-4 py-3 border border-border focus:outline-none focus:border-gold text-sm font-body bg-white transition-colors" required>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white hover:bg-gold py-3 text-sm uppercase tracking-widest transition-colors mt-4 shadow-md">
+                    Authenticate
+                </button>
+            </form>
+
+            <div class="relative flex items-center justify-center mb-8">
+                <div class="absolute border-t border-border w-full"></div>
+                <span class="bg-soft px-4 text-xs text-gray-400 font-medium tracking-wider uppercase relative">Or Demo Role As</span>
+            </div>
+
+            <!-- Role Selector -->
+            <div class="grid grid-cols-1 gap-3">
+                <a href="index.html?role=superadmin" class="group flex items-center p-3 border border-border hover:border-gold bg-white transition-all shadow-sm">
+                    <div class="w-10 h-10 bg-primary text-gold flex items-center justify-center group-hover:bg-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-crown text-sm"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-primary">Super Administrator</p>
+                        <p class="text-xs text-gray-500">Full system & financial access</p>
+                    </div>
+                </a>
+                <a href="index.html?role=manager" class="group flex items-center p-3 border border-border hover:border-gold bg-white transition-all shadow-sm">
+                    <div class="w-10 h-10 bg-gray-100 text-gray-600 flex items-center justify-center group-hover:bg-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-warehouse text-sm"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-primary">Warehouse Manager</p>
+                        <p class="text-xs text-gray-500">Inventory & logistics control</p>
+                    </div>
+                </a>
+                <a href="index.html?role=staff" class="group flex items-center p-3 border border-border hover:border-gold bg-white transition-all shadow-sm">
+                    <div class="w-10 h-10 bg-gray-100 text-gray-600 flex items-center justify-center group-hover:bg-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-scissors text-sm"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-primary">Atelier Staff / Tailor</p>
+                        <p class="text-xs text-gray-500">Order fulfillment & tasks</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

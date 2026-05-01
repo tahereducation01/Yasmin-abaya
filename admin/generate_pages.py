@@ -1,7 +1,7 @@
 import os
 import re
 
-base_dir = r"c:\Users\hussa\Desktop\Yasmin-abaya-main\Yasmin-abaya-main\admin"
+base_dir = r"c:\Users\hussa\Desktop\Yasmeen-abaya-main\Yasmeen-abaya-main\admin"
 index_file = os.path.join(base_dir, "index.html")
 
 with open(index_file, "r", encoding="utf-8") as f:
@@ -432,7 +432,7 @@ coupons_content = """
                         </thead>
                         <tbody class="divide-y divide-border">
                             <tr class="hover:bg-soft/50 transition-colors">
-                                <td class="px-6 py-4 font-medium text-gold tracking-widest uppercase">YASMIN10</td>
+                                <td class="px-6 py-4 font-medium text-gold tracking-widest uppercase">YASMEEN10</td>
                                 <td class="px-6 py-4">10% Off Sitewide</td>
                                 <td class="px-6 py-4">156 times</td>
                                 <td class="px-6 py-4 text-gray-500">Dec 31, 2026</td>
@@ -480,12 +480,12 @@ settings_content = """
             <div class="bg-white border border-border max-w-2xl">
                 <div class="p-6 border-b border-border">
                     <h3 class="font-heading text-xl text-primary mb-1">Boutique Profile</h3>
-                    <p class="text-sm text-gray-500">Manage Yasmin Abaya brand settings.</p>
+                    <p class="text-sm text-gray-500">Manage AL Yasmeen Abaya brand settings.</p>
                 </div>
                 <div class="p-6 space-y-6">
                     <div>
                         <label class="block text-sm font-medium text-primary mb-2">Brand Name</label>
-                        <input type="text" value="Yasmin Abaya" class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body">
+                        <input type="text" value="AL Yasmeen Abaya" class="w-full px-4 py-2 border border-border focus:outline-none focus:border-gold text-sm font-body">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-primary mb-2">Headquarters</label>
@@ -507,3 +507,6 @@ settings_content = """
 generate_page("settings.html", "settings.html", "System Settings", "Configure your luxury CRM platform.", settings_content)
 
 print("Pages generated successfully.")
+
+
+
